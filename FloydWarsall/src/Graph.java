@@ -65,7 +65,7 @@ public class Graph<T> {
         for(int k=0; k<graph.size(); k++){
             for(int i=0; i< graph.size(); i++){
                 for(int j=0; j< graph.size(); j++){
-                    if(dist[i][j]>dist[i][k]+dist[k][j]){
+                    if(dist[i][j] > (dist[i][k] + dist[k][j]) && ((dist[i][k]) != Integer.MAX_VALUE && ((dist[k][j]) != Integer.MAX_VALUE))){
                         dist[i][j]=dist[i][k]+dist[k][j];
                     }
                 }
